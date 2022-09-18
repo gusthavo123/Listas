@@ -1,10 +1,7 @@
 
 package com.mycompany.lista8;
 import java.util.Scanner;
-/**
- *
- * @author labinfo
- */
+
 public class Lista8 {
 
     public static void main(String[] args) {
