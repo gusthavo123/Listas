@@ -1,26 +1,26 @@
 
 package com.mycompany.lista8;
-import java.util.Arrays;
+
 import java.util.Scanner;
-/**
- *
- * @author labinfo
- */
+
 public class Atv4 {
     public static void main(String[] args) {
         Scanner ler = new Scanner (System.in);
-        int n = 0;
-        int m = 0;
-        int A[][] = new int [4][4];
-        for (int i =0; i < 4; i ++){
-        for (int j = 0; j < 4; j ++){
-        System.out.println("Informe a linha: " + i + " º" + " e a coluna: " + j + " º");
-        A[i][j] = ler.nextInt();
-        if (A[i][j] > n){
-            A[i][j] = 0;
-            System.out.println ("A localização do maior número da matrix é: " + n + Arrays.toString(A[i]) + Arrays.toString(A[j]));
-           }
-         }
-        }
-    }
+        int A[][] = new int[4][4];
+		int maiorValor = 0;
+		int x=0;
+		int y=0;
+		for (int i = 0; i < A.length; i++) {
+			for (int j = 0; j < A.length; j++) {
+				System.out.println("Digite o número "+(j+1)+" da "+(i+1)+" linha:");
+				A[i][j] = ler.nextInt();
+				if (A[i][j] > maiorValor) {
+					maiorValor = A[i][j];
+					x = i;
+					y = j;
+				}
+			}
+		}
+		System.out.println("O maior número se encontra em matriz["+x+"]["+y+"] e é igual a "+maiorValor);
+	}
 }
